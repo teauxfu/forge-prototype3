@@ -1,6 +1,6 @@
-const rules = require("./webpack.rules");
+import Rules from "./webpack.rules";
 
-rules.push({
+Rules.push({
   test: /\.s[ac]ss$/i,
   use: [
     // Creates `style` nodes from JS strings
@@ -12,9 +12,6 @@ rules.push({
   ],
 });
 
-module.exports = {
-  // Put your normal webpack config below here
-  module: {
-    rules,
-  },
+export const module = {
+  Rules,
 };
